@@ -1,0 +1,14 @@
+需要把项目挂载到NDK的apps目录下
+
+1、在<NDK>/apps目录下新建Common文件夹。
+2、在Common目录下新建一个文件Application.mk，内容如下：
+
+APP_PROJECT_PATH := ~/Project/datatests/third/Common/android
+APP_BUILD_SCRIPT := ~/Project/datatests/third/Common/android/Android.mk
+APP_PLATFORM     := android-8
+APP_MODULES      := Common
+
+APP_PROJECT_PATH是工程路径。
+APP_BUILD_SCRIPT是makefile文件路径。
+APP_PLATFORM是支持的Android系统版本。
+APP_MODULES是需要编译的模块，如果有多个模块用空格分隔。
